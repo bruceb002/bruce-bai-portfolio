@@ -13,12 +13,6 @@ import { ContactCard } from "@/components/contact/contact-card";
 import { ContactForm } from "@/components/contact/contact-form";
 import { DATA } from "@/data";
 
-const EMAIL_CONFIG = {
-  serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-  templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-  publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-};
-
 const ContactPage: React.FC = () => {
   const [state, setState] = useState<ContactPageState>({
     isSubmitting: false,
@@ -30,12 +24,16 @@ const ContactPage: React.FC = () => {
     async (formData: ContactFormData): Promise<void> => {
       setState((prev) => ({ ...prev, isSubmitting: true, error: null }));
 
-      const missingVars = Object.entries(EMAIL_CONFIG)
-        .filter(([_, value]) => !value)
-        .map(([key]) => `NEXT_PUBLIC_EMAILJS_${key.toUpperCase().replace(/([A-Z])/g, "_$1")}`);
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-      if (missingVars.length > 0) {
-        console.error("Email configuration is incomplete:", missingVars);
+      if (!serviceId || !templateId || !publicKey) {
+        console.error("Missing EmailJS Environment Variables:", {
+          serviceId,
+          templateId,
+          publicKey,
+        });
         addToast({
           title: "Failed to Send Message",
           description: "Email configuration is incomplete. Please check environment variables.",
@@ -54,23 +52,25 @@ const ContactPage: React.FC = () => {
         };
 
         await emailjs.send(
-          EMAIL_CONFIG.serviceId!,
-          EMAIL_CONFIG.templateId!,
+          serviceId,
+          templateId,
           templateParams,
-          EMAIL_CONFIG.publicKey!,
+          publicKey,
         );
 
         setState((prev) => ({ ...prev, isSuccess: true }));
         addToast({
           title: "Message Sent Successfully",
-          description:
-            "Thank you for your message! I'll get back to you soon.",
+          description: "Thank you for your message! I'll get back to you soon.",
           color: "success",
         });
       } catch (error) {
+        console.error("EmailJS Error Object:", error);
         const errorMessage =
           error instanceof Error
             ? error.message
+            : typeof error === "object" && error !== null && "text" in error
+            ? (error as { text: string }).text
             : "Failed to send message. Please try again later.";
 
         setState((prev) => ({ ...prev, error: errorMessage }));
