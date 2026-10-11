@@ -1,8 +1,10 @@
-import { useState, useEffect, useCallback } from "react";
+"use client";
+
+import { useState, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { ProjectCard } from "@/components/project-card";
 import { ProjectModal } from "@/components/project-modal";
-import { MotionEffect } from "@/components/motion-effect";
 import { ProjectsGridProps, Project } from "@/components/projects/types";
 
 export const ProjectsGrid = ({
@@ -10,7 +12,6 @@ export const ProjectsGrid = ({
   className = "",
 }: ProjectsGridProps) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [animationKey, setAnimationKey] = useState(0);
 
   const handleOpenModal = useCallback(
     (project: Project) => setSelectedProject(project),
@@ -18,36 +19,44 @@ export const ProjectsGrid = ({
   );
   const handleCloseModal = useCallback(() => setSelectedProject(null), []);
 
-  useEffect(() => {
-    setAnimationKey((prevKey) => prevKey + 1);
-  }, [projects]);
-
   return (
-    <div
-      className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${className}`}
-    >
-      {projects.map((project, index) => (
-        <MotionEffect
-          key={`${project.id}-${animationKey}`}
-          fade
-          inView
-          zoom
-          className="w-full md:max-w-none"
-          delay={0.1 + index * 0.1}
-          resetKey={animationKey}
-          slide={{ direction: "down" }}
-        >
-          <ProjectCard
-            project={project}
-            onViewDetails={() => handleOpenModal(project)}
-          />
-        </MotionEffect>
-      ))}
+    <>
+      {/* Added 'relative' and 'w-full' to trap absolute elements and prevent teleporting */}
+      <motion.div 
+        layout 
+        className={`flex flex-wrap justify-center gap-6 relative w-full ${className}`}
+      >
+        <AnimatePresence mode="popLayout">
+          {projects.map((project) => (
+            <motion.div
+              key={project.id}
+              layout 
+              // Swapped Y for X to create a horizontal carousel swipe effect
+              initial={{ opacity: 0, scale: 0.9, x: 60 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              exit={{ opacity: 0, scale: 0.8, x: -60 }}
+              transition={{ 
+                layout: { type: "spring", stiffness: 300, damping: 30 },
+                opacity: { duration: 0.25 },
+                scale: { duration: 0.25 },
+                x: { type: "spring", stiffness: 300, damping: 30 }
+              }}
+              className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] origin-center"
+            >
+              <ProjectCard
+                project={project}
+                onViewDetails={() => handleOpenModal(project)}
+              />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
+      
       <ProjectModal
         isOpen={!!selectedProject}
         project={selectedProject}
         onClose={handleCloseModal}
       />
-    </div>
+    </>
   );
 };

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   Navbar,
@@ -33,22 +34,37 @@ export const Navigation = () => {
       onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarContent className="flex justify-between items-center w-full">
-        <NavbarBrand>
-          <motion.div
-            animate={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.5 }}
+      <NavbarBrand>
+        <motion.div
+          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Link
+            className="flex items-center gap-3 group"
+            href="/"
+            onClick={() => setIsMenuOpen(false)}
           >
-            <Link
-              className="font-bold text-inherit text-xl bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent"
-              href="/"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Portfolio
-            </Link>
-          </motion.div>
-        </NavbarBrand>
+            {/* Monogram Emblem Container */}
+            <div className="relative w-10 h-10 transition-transform group-hover:scale-105 group-hover:rotate-3 shrink-0 overflow-visible translate-y-[2px]">
+              <Image
+                src="/bb-monogram.png"
+                alt="BB Monogram Signature"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
 
+            {/* Full Name with Universal Deep Burnished Gold Gradient */}
+            <span className="font-extrabold text-3xl tracking-tight leading-none bg-gradient-to-r from-[#8B6508] via-[#DAA520] to-[#8B6508] bg-clip-text text-transparent hidden sm:block">
+              Bruce Bai
+            </span>
+          </Link>
+        </motion.div>
+      </NavbarBrand>
+
+        {/* --- REST OF NAVIGATION (UNTOUCHED) --- */}
         <NavbarContent className="hidden sm:flex justify-center gap-6 flex-grow">
           {menuItems.map((item, index) => (
             <NavbarItem key={item.name}>
@@ -83,7 +99,7 @@ export const Navigation = () => {
         />
       </NavbarContent>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu (UNTOUCHED) */}
       <NavbarMenu className="bg-background/80 backdrop-blur-lg pt-6 sm:hidden">
         <div className="mx-auto max-w-lg space-y-4">
           {menuItems.map((item, index) => (

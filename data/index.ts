@@ -1,20 +1,20 @@
 export const DATA = {
   home: {
     hero: {
-      name: "Sofiane Bahmed",
-      title: "Full stack developer & UI/UX Designer",
+      name: "Bruce Bai",
+      title: "Software Engineer",
       subtitle:
-        "I build fast, accessible and visually engaging web experiences.",
+        "Building scalable systems and engaging full-stack web experiences.",
     },
     skills: {
       sectionTitle: "Skills & Expertise",
       sectionDescription:
-        " Specialized in creating modern digital experiences with cutting-edge technologies",
+        "Specialized in backend architecture, frontend development, and systems migration.",
       overview: [
         {
-          name: "UI/UX Design",
+          name: "Backend Development",
           level: 95,
-          icon: "lucide:layout-dashboard",
+          icon: "lucide:server",
           color: "primary",
         },
         {
@@ -24,189 +24,109 @@ export const DATA = {
           color: "secondary",
         },
         {
-          name: "Mobile Development",
+          name: "Systems Optimization",
           level: 85,
-          icon: "lucide:smartphone",
+          icon: "lucide:database",
           color: "success",
         },
         {
-          name: "Motion Design",
+          name: "Data Management",
           level: 88,
-          icon: "lucide:video",
+          icon: "lucide:bar-chart",
           color: "warning",
-        },
-      ],
-    },
-    testimonials: {
-      sectionTitle: "Client Testimonials",
-      sectionDescription: "What clients say about working together",
-      items: [
-        {
-          id: 1,
-          name: "Sarah Johnson",
-          role: "Product Manager at TechNova",
-          content:
-            "The design system created for our SaaS platform reduced our development time by 40% while improving consistency across all our products. The attention to accessibility standards was particularly impressive.",
-          avatar: "https://img.heroui.chat/image/avatar?w=100&h=100&u=1",
-        },
-        {
-          id: 2,
-          name: "Michael Chen",
-          role: "CTO at StartUpGrid",
-          content:
-            "Working with this team transformed our mobile app's user retention by 35% in just three months. Their data-driven design approach helped us identify pain points we didn't even know existed.",
-          avatar: "https://img.heroui.chat/image/avatar?w=100&h=100&u=2",
-        },
-        {
-          id: 3,
-          name: "David Rodriguez",
-          role: "UX Director at FinTech Global",
-          content:
-            "The dashboard redesign resulted in a 50% reduction in support tickets. Their ability to balance complex financial data with clean visualization is unmatched in the industry.",
-          avatar: "https://img.heroui.chat/image/avatar?w=100&h=100&u=3",
-        },
-        {
-          id: 4,
-          name: "Priya Patel",
-          role: "E-commerce Manager at StyleHub",
-          content:
-            "Our conversion rate increased by 28% after implementing their checkout flow redesign. They understood our international user base better than our internal team.",
-          avatar: "https://img.heroui.chat/image/avatar?w=100&h=100&u=4",
-        },
-        {
-          id: 5,
-          name: "James Wilson",
-          role: "Head of Product at HealthTrack",
-          content:
-            "The healthcare app we built together received FDA approval largely due to its intuitive patient interface. Their understanding of regulatory requirements saved us months of rework.",
-          avatar: "https://img.heroui.chat/image/avatar?w=100&h=100&u=5",
-        },
-        {
-          id: 6,
-          name: "Lisa Nguyen",
-          role: "Marketing Director at EduTech Solutions",
-          content:
-            "Our user onboarding completion rate went from 65% to 92% after their redesign. The way they simplified complex educational concepts into clear interfaces was remarkable.",
-          avatar: "https://img.heroui.chat/image/avatar?w=100&h=100&u=6",
-        },
-        {
-          id: 7,
-          name: "Thomas Okafor",
-          role: "Founder at AgriTech Africa",
-          content:
-            "They designed an agricultural monitoring app that works perfectly even in low-connectivity rural areas. Cultural sensitivity and technical innovation in perfect balance.",
-          avatar: "https://img.heroui.chat/image/avatar?w=100&h=100&u=7",
         },
       ],
     },
   },
   about: {
     profile: {
-      name: "Sofiane Bahmed",
-      title: "Full Stack Developer",
-      image:
-        "https://res.cloudinary.com/devq06psf/image/upload/v1750626923/chic_soba_bkhd8o.png",
+      name: "Bruce Bai",
+      title: "Software Engineer & CS Graduate Student",
+      image: "/bruce-profile.jpg",
       description: [
-        "I'm a creative full-stack developer with a passion for UI/UX design and clean code. I focus on building beautiful, functional, and high-performance websites and web apps.",
-        "My approach is both technical and aesthetic — I enjoy turning complex problems into elegant user experiences. I work primarily with modern frameworks like React, Vite, and TailwindCSS.",
-        "Outside of code, I enjoy motion design, product strategy, and always pushing the boundaries of front-end development.",
+        "I'm a software engineer passionate about tackling complex full-stack challenges, from optimizing database queries to architecting responsive web interfaces.",
+        "Currently completing my Master's at USC, I've spent my career interning across the tech and finance sectors, migrating legacy systems, building C++ Proof of Concepts, and tracing request flows to cut load times from minutes to milliseconds.",
+        "Outside of code, I'm an active tenor in a university acapella group, where I arrange music mashups and perform.",
       ],
     },
     education: [
       {
-        title: "High School of Art and Design",
-        date: "2003 - 2006",
-        icon: "mdi:palette",
-        description:
-          "Focused on foundational art and visual design principles, which sparked my early interest in creative problem solving. Explored traditional media, digital illustration, and visual storytelling.",
-      },
-      {
-        title: "University of Technology and Design",
-        date: "2006 - 2010",
+        title: "University of Southern California",
+        date: "Expected Dec 2026",
         icon: "mdi:school",
         description:
-          "Earned a Bachelor's degree in Computer Science with a minor in Design. Gained strong skills in software development, user interface engineering, data structures, and human-computer interaction.",
+          "M.S. in Computer Science. Coursework includes Artificial Intelligence, Machine Learning, Database Systems, and Analysis of Algorithms.",
       },
       {
-        title: "Institute of Interactive Media",
-        date: "2011 - 2012",
+        title: "University of California Santa Cruz",
+        date: "Sept 2020 - June 2024",
         icon: "mdi:school-outline",
         description:
-          "Completed a Master's degree specializing in UX/UI Design and Front-End Development. Merged technical expertise with visual communication to design user-centered digital products and prototypes.",
+          "B.S. in Computer Science, Cum Laude (GPA: 3.83). Coursework focused on Distributed Systems, Computer Systems Design, and Computer Networking.",
       },
     ],
     experience: [
       {
-        title: "Creative Director",
-        date: "2018 - Present",
+        title: "Software Engineering Intern | Medtronic",
+        date: "June 2026 - Aug 2026",
         icon: "mdi:briefcase",
         description:
-          "Lead creative and development teams to build digital experiences that combine innovation with user empathy. Oversee branding, UI/UX strategy, and development pipelines for tech startups and clients.",
+          "Developed a C++ GUI Proof of Concept to migrate embedded Linux from Chromium to WebKitGTK. Architected a simulated debug port framework using backend C++ Crow APIs and automated Playwright frontend actions.",
       },
       {
-        title: "Senior UX Engineer",
-        date: "2015 - 2018",
-        icon: "mdi:monitor-dashboard",
+        title: "Software Engineering Intern | Olympiah Startup",
+        date: "June 2025 - Aug 2025",
+        icon: "mdi:briefcase",
         description:
-          "Designed and implemented high-fidelity web interfaces using React, Figma, and Tailwind. Collaborated cross-functionally with developers and designers to craft intuitive user flows and interactions.",
+          "Diagnosed a homepage bottleneck across React, Node.js, and MongoDB, reducing load times to sub-second performance. Refactored REST APIs from Next.js routes to Express.",
       },
       {
-        title: "Front-End Developer & Designer",
-        date: "2012 - 2015",
+        title: "Software Engineering Intern | Best Egg Financial Services",
+        date: "June 2023 - Sept 2023",
         icon: "mdi:code-tags",
         description:
-          "Developed responsive websites and applications with a focus on accessibility, visual aesthetics, and performance. Delivered pixel-perfect interfaces from wireframes to production code.",
+          "Integrated a chatbot UI widget using Angular and TypeScript. Prevented frontend regressions by authoring Karma unit tests and merged verified features via Git pull requests.",
+      },
+      {
+        title: "Financial Technology Intern | Marlette Funding LLC",
+        date: "June 2022 - Sept 2022",
+        icon: "mdi:database",
+        description:
+          "Cut forecasting runtimes from 12+ hours to 25 minutes by migrating a legacy SAS workflow to optimized SQL pipelines and tuning relational database query performance.",
       },
     ],
     technologies: {
       frontend: {
         description:
-          "I craft dynamic, responsive UIs using modern JavaScript frameworks and CSS tools.",
+          "Building dynamic, responsive user interfaces using modern JavaScript frameworks.",
         tools: [
           { name: "React", icon: "logos:react" },
-          { name: "Next.js", icon: "skill-icons:nextjs-dark" },
-          { name: "Tailwind", icon: "logos:tailwindcss-icon" },
+          { name: "Angular", icon: "logos:angular-icon" },
+          { name: "Vue", icon: "logos:vue" },
           { name: "TypeScript", icon: "logos:typescript-icon" },
-          { name: "HTML5", icon: "logos:html-5" },
-          { name: "CSS3", icon: "logos:css-3" },
+          { name: "Tailwind", icon: "logos:tailwindcss-icon" },
         ],
       },
       backend: {
         description:
-          "I build fast APIs and scalable backends using Node.js, Bun, and Python.",
+          "Architecting robust APIs, managing data, and optimizing server performance.",
         tools: [
-          { name: "Node.js", icon: "logos:nodejs-icon" },
-          { name: "Bun", icon: "logos:bun" },
+          { name: "C++", icon: "logos:c-plusplus" },
           { name: "Python", icon: "logos:python" },
-          { name: "MySQL", icon: "logos:mysql-icon" },
-          { name: "PostgresSQL", icon: "logos:postgresql" },
-          { name: "OpenAI", icon: "simple-icons:openai" },
+          { name: "Node.js", icon: "logos:nodejs-icon" },
+          { name: "Express", icon: "simple-icons:express" },
+          { name: "SQL", icon: "logos:mysql-icon" },
+          { name: "MongoDB", icon: "logos:mongodb-icon" },
         ],
       },
-      uiUx: {
+      tools: {
         description:
-          "I design smooth, user-centered interfaces and high-fidelity prototypes.",
+          "Leveraging industry-standard tools for version control, testing, and deployment.",
         tools: [
-          { name: "Figma", icon: "logos:figma" },
-          { name: "Framer", icon: "simple-icons:framer", color: "#0055FF" },
-          { name: "Notion", icon: "logos:notion-icon" },
-        ],
-      },
-      graphicDesign: {
-        description:
-          "My graphic work includes logos, branding, and posters using Adobe Suite.",
-        tools: [
-          { name: "Photoshop", icon: "logos:adobe-photoshop" },
-          { name: "Illustrator", icon: "logos:adobe-illustrator" },
-        ],
-      },
-      motionDesign: {
-        description:
-          "I animate UI flows and cinematic intros using After Effects and Blender.",
-        tools: [
-          { name: "After Effects", icon: "logos:adobe-after-effects" },
-          { name: "Premiere Pro", icon: "logos:adobe-premiere" },
-          { name: "Blender", icon: "logos:blender" },
+          { name: "Git", icon: "logos:git-icon" },
+          { name: "Docker", icon: "logos:docker-icon" },
+          { name: "Postman", icon: "logos:postman-icon" },
+          { name: "GitHub Actions", icon: "logos:github-actions" },
         ],
       },
     },
@@ -214,257 +134,69 @@ export const DATA = {
   projects: {
     sectionTitle: "Featured Projects",
     sectionDescription:
-      "A selection of my recent projects showcasing UI/UX design and development expertise",
+      "A selection of my academic and hackathon projects showcasing full-stack development and algorithmic optimization.",
     work: [
       {
         id: 1,
-        title: "Digital Banking App",
+        title: "Floorplan Processing Optimization",
         description:
-          "A streamlined digital banking interface emphasizing clarity, speed, and intuitive design.",
-        image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=1",
-        gallery: [
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=1",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=1-1",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=1-2",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=1-3",
-        ],
-        category: "Applications",
+          "Parsed deeply nested JSON spatial datasets to isolate layout attributes and identify root-cause rendering failures.",
+        image: "/grad-project-thumb.png", // <--- Updated!
+        gallery: [],
+        category: "Graduate Project",
         details:
-          "A feature-rich digital banking app built with React and TailwindCSS, integrating seamless animations via Framer Motion. Designed with a mobile-first approach and a modular component system powered by TypeScript and Vite.",
-        github: "https://github.com",
-        live: "https://example.com",
+          "Navigated complex multi-index schemas to extract core geometric inputs. Stress-tested TSP variants and evaluated Dynamic Programming and Simulated Annealing paradigms to pinpoint a failure in legacy wall-merging coordinate tracking.",
+        github: "https://github.com/bruceb002",
         tech: [
-          { name: "React", icon: "logos:react" },
-          { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
-          { name: "TypeScript", icon: "logos:typescript-icon" },
-          { name: "Expo", icon: "simple-icons:expo" },
+          { name: "Python", icon: "logos:python" },
+          { name: "Algorithms", icon: "lucide:git-merge" },
         ],
       },
       {
         id: 2,
-        title: "E-commerce Platform",
+        title: "Blackboard Mobile App",
         description:
-          "Scalable and responsive online store with dynamic product filtering and intuitive cart management.",
-        image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=2",
-        gallery: [
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=2",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=2-1",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=2-2",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=2-3",
-        ],
-        category: "Web Development",
+          "Mobile application for academic schedules and dynamic class registration flows.",
+        image: "/capstone-thumb.jpeg", // <--- Updated!
+        gallery: [],
+        category: "Capstone",
         details:
-          "A fully functional e-commerce platform built with React and TailwindCSS. Features product listings, advanced filters, cart and checkout system, and a modern UI with responsive design for all devices.",
-        github: "https://github.com",
-        live: "https://example.com",
-        tech: [
-          { name: "React", icon: "logos:react" },
-          { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
-          { name: "TypeScript", icon: "logos:typescript-icon" },
-          { name: "PostgreSQL", icon: "logos:postgresql" },
-        ],
-      },
-      {
-        id: 3,
-        title: "Travel Booking System",
-        description:
-          "Comprehensive booking platform for flights, hotels, and rentals with live availability.",
-        image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=3",
-        gallery: [
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=3",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=3-1",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=3-2",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=3-3",
-        ],
-        category: "Web Development",
-        details:
-          "A modern travel booking system built with Next.js and TailwindCSS. Users can search and book flights, hotels, and car rentals with real-time availability and intuitive UI components powered by HeroUI.",
-        github: "https://github.com",
-        live: "https://example.com",
-        tech: [
-          { name: "Next.js", icon: "skill-icons:nextjs-dark" },
-          { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
-          { name: "TypeScript", icon: "logos:typescript-icon" },
-        ],
-      },
-      {
-        id: 4,
-        title: "AI Chat Assistant",
-        description:
-          "Smart customer support assistant with contextual awareness and real-time replies.",
-        image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=4",
-        gallery: [
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=4",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=4-1",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=4-2",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=4-3",
-        ],
-        category: "Applications",
-        details:
-          "AI-powered chat assistant developed with React and TailwindCSS. Integrated with OpenAI’s GPT API for contextual conversations, deployed via Vercel with real-time response and adaptive UI.",
-        github: "https://github.com",
-        live: "https://example.com",
-        tech: [
-          { name: "React", icon: "logos:react" },
-          { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
-          { name: "OpenAI API", icon: "simple-icons:openai" },
-          { name: "Vercel", icon: "simple-icons:vercel" },
-        ],
-      },
-      {
-        id: 5,
-        title: "Portfolio API & CMS",
-        description:
-          "Headless API backend with admin-friendly CMS capabilities.",
-        image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=5",
-        gallery: [
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=5",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=5-1",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=5-2",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=5-3",
-        ],
-        category: "Backend Services",
-        details:
-          "A modular REST API built with Node.js and Express, powering dynamic portfolio websites. It includes JWT-based authentication, MySQL integration, and a Swagger-documented CMS interface for easy content management by non-developers.",
-        github: "https://github.com",
-        tech: [
-          { name: "Node.js", icon: "logos:nodejs-icon" },
-          { name: "MySQL", icon: "logos:mysql-icon" },
-          { name: "JWT", icon: "simple-icons:jsonwebtokens" },
-          { name: "Swagger", icon: "simple-icons:swagger" },
-        ],
-      },
-      {
-        id: 6,
-        title: "Fitness Tracker App",
-        description:
-          "Monitor workouts, calorie intake, and goals in one place.",
-        image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=6",
-        gallery: [
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=6",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=6-1",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=6-2",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=6-3",
-        ],
-        category: "Applications",
-        details:
-          "A cross-platform fitness application developed with React Native and styled using TailwindCSS via Expo. It offers calorie tracking, workout logging, analytics via charts, and custom goal-setting—all within a mobile-optimized interface.",
-        github: "https://github.com",
-        live: "https://example.com",
+          "Developed core screens and custom UI components via Expo Go. Integrated Cloud Firestore and Firebase Cloud Storage to model NoSQL schemas and securely map user profile media uploads. Led the team through Agile sprints using Jira.",
+        github: "https://github.com/bruceb002",
         tech: [
           { name: "React Native", icon: "logos:react" },
-          { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
+          { name: "Firebase", icon: "logos:firebase" },
           { name: "Expo", icon: "simple-icons:expo" },
         ],
       },
       {
-        id: 7,
-        title: "Content Scheduler",
+        id: 3,
+        title: "JBS Rideshare Web Application",
         description:
-          "Plan, schedule, and automate your social media posts effortlessly.",
-        image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=7",
-        gallery: [
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=7",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=7-1",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=7-2",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=7-3",
-        ],
-        category: "Applications",
+          "First Place winner at the 2023 ACM Hackathon. Transit landing view mapped to asynchronous driver data.",
+        image: "/hackathon-thumb.png", // <--- Updated!
+        gallery: [],
+        category: "Hackathon",
         details:
-          "A productivity app designed for content creators featuring calendar syncing, automated post publishing, rich media previews, and cloud synchronization for seamless cross-device access.",
-        github: "https://github.com",
-        live: "https://example.com",
+          "Engineered a Vue.js transit landing view, integrating Firebase APIs to map asynchronous driver data into structured UI blocks under strict time constraints.",
+        github: "https://github.com/bruceb002",
         tech: [
-          { name: "Next.js", icon: "skill-icons:nextjs-dark" },
-          { name: "MySQL", icon: "logos:mysql-icon" },
-          { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
-        ],
-      },
-      {
-        id: 8,
-        title: "Real Estate Dashboard",
-        description:
-          "Comprehensive dashboard to manage properties, leads, and sales pipelines effectively.",
-        image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=8",
-        gallery: [
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=8",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=8-1",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=8-2",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=8-3",
-        ],
-        category: "Web Development",
-        details:
-          "An admin panel tailored for real estate professionals featuring interactive data visualizations, lead tracking, and CRM system integrations to streamline client and property management.",
-        github: "https://github.com",
-        live: "https://example.com",
-        tech: [
-          { name: "React", icon: "logos:react" },
-          { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
-          { name: "Chart.js", icon: "simple-icons:chartdotjs" },
-        ],
-      },
-      {
-        id: 9,
-        title: "Crypto Wallet API",
-        description:
-          "Robust backend API for secure cryptocurrency operations and blockchain interactions.",
-        image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=9",
-        gallery: [
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=9",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=9-1",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=9-2",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=9-3",
-        ],
-        category: "Backend Services",
-        details:
-          "Secure Node.js API supporting Ethereum and Bitcoin transactions. Features transaction signing, wallet address creation, and real-time blockchain event monitoring using Web3.js. Enhanced with hardware security module (HSM) integration for secure key management.",
-        github: "https://github.com",
-        tech: [
-          { name: "Node.js", icon: "logos:nodejs-icon" },
-          { name: "Ethereum", icon: "logos:ethereum" },
-          { name: "Web3.js", icon: "simple-icons:web3dotjs" },
-          { name: "PostgreSQL", icon: "logos:postgresql" },
-          { name: "JWT", icon: "simple-icons:jsonwebtokens" },
-        ],
-      },
-      {
-        id: 10,
-        title: "SaaS Subscription API",
-        description:
-          "Backend API managing SaaS subscriptions, billing, and user accounts.",
-        image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=10",
-        gallery: [
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=10",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=10-1",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=10-2",
-          "https://img.heroui.chat/image/dashboard?w=600&h=400&u=10-3",
-        ],
-        category: "Backend Services",
-        details:
-          "RESTful API supporting SaaS subscription workflows with Stripe integration, usage metering, tiered pricing, webhook handling, trial periods, and analytics. Optimized for high concurrency with Redis caching.",
-        github: "https://github.com",
-        tech: [
-          { name: "Node.js", icon: "logos:nodejs-icon" },
-          { name: "Stripe", icon: "logos:stripe" },
-          { name: "PostgreSQL", icon: "logos:postgresql" },
-          { name: "Redis", icon: "logos:redis" },
-          { name: "JWT", icon: "simple-icons:jsonwebtokens" },
+          { name: "Vue.js", icon: "logos:vue" },
+          { name: "Firebase", icon: "logos:firebase" },
         ],
       },
     ],
   },
   contact: {
     heading:
-      "Have a project in mind? Get in touch and let's create something amazing.",
+      "Looking for a driven software engineer? Let's connect.",
     location: {
-      mapSrc:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.017947223557!2d-122.41941508468191!3d37.774929779759245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809cbb69f3ef%3A0x4c80b42c33b6a77d!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1715701234567!5m2!1sen!2sus",
-      address: "San Francisco, CA",
+      address: "Los Angeles, CA",
     },
   },
   morphingTexts: {
-    about: ["Creative", "Passionate", "Developer"] as const,
-    projects: ["My Work", "Creations", "Experiments", "Innovations"] as const,
+    about: ["Software Engineer", "Full-Stack", "Problem Solver"] as const,
+    projects: ["My Work", "Projects", "Hackathons", "Architecture"] as const,
     contact: ["Let's", "Build", "Together"] as const,
   },
   navigation: [
@@ -474,27 +206,21 @@ export const DATA = {
     { name: "Contact", href: "/contact", icon: "lucide:send" },
   ],
   footer: {
-    name: "Sofiane Bahmed",
-    description: "Always interested in new projects and collaborations.",
+    name: "Bruce Bai",
+    description: "Software Engineer",
     contact: {
-      email: "hello@example.com",
-      phone: "+1 (555) 123-4567",
-      location: "San Francisco, CA",
+      email: "brucebai002@gmail.com",
+      phone: "(510) 409-5811",
+      location: "Fremont, CA", 
     },
     socialLinks: [
-      { platform: "X", url: "https://x.com", icon: "simple-icons:x" },
-      { platform: "GitHub", url: "https://github.com", icon: "mdi:github" },
+      { platform: "GitHub", url: "https://github.com/bruceb002", icon: "mdi:github" },
       {
         platform: "LinkedIn",
-        url: "https://linkedin.com",
+        url: "https://linkedin.com/in/bruce-bai/",
         icon: "mdi:linkedin",
       },
-      {
-        platform: "Dribbble",
-        url: "https://dribbble.com",
-        icon: "mdi:dribbble",
-      },
     ],
-    services: ["UI/UX Design", "Web Development", "Mobile Apps", "Consulting"],
+    services: ["Software Engineering", "Full-Stack Development", "Systems Optimization"],
   },
 } as const;

@@ -39,7 +39,7 @@ export const Footer = () => {
             </div>
           </div>
           <div>
-            <h4 className="font-semibold mb-4">Services</h4>
+            <h4 className="font-semibold mb-4">Expertise</h4>
             <ul className="space-y-2 text-foreground-600">
               {services.map((service, index) => (
                 <li key={index}>{service}</li>

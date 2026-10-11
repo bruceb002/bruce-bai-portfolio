@@ -1,16 +1,15 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import type { PressEvent } from "@react-aria/interactions";
 
 import { motion } from "framer-motion";
 import { Button, Link } from "@heroui/react";
 import { Icon } from "@iconify/react";
 
-import { Hole } from "@/components/backgrounds/hole/hole";
 import { DATA } from "@/data";
 
 export const HeroSection = ({
-  showBackground = true,
   name = DATA.home.hero.name,
   title = DATA.home.hero.title,
   subtitle = DATA.home.hero.subtitle,
@@ -20,6 +19,13 @@ export const HeroSection = ({
   title?: string;
   subtitle?: string;
 }) => {
+  const [mounted, setMounted] = useState(false);
+
+  // Tells React the component has officially loaded in the browser
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const scrollToWork = (_e: PressEvent) => {
     const workSection = document.getElementById("work-section");
 
@@ -29,10 +35,46 @@ export const HeroSection = ({
   };
 
   return (
-    <section className="min-h-[calc(100vh-64px)] flex items-center justify-center relative overflow-hidden bg-background">
-      {showBackground && <Hole />}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary-500/10 to-transparent" />
-      <div className="container mx-auto px-4 z-10">
+    // Only apply color transition after mount
+    <section className={`min-h-[calc(100vh-64px)] flex items-center justify-center relative overflow-hidden bg-background ${mounted ? "transition-colors duration-1000" : ""}`}>
+      
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Day Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/hero-day-poster.webp"
+          className={`absolute inset-0 h-full w-full object-cover opacity-80 dark:opacity-0 ${
+            mounted ? "transition-opacity duration-1000 ease-in-out" : ""
+          }`}
+        >
+          <source src="/hero-day-video.mp4" type="video/mp4" />
+        </video>
+
+        {/* Night Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/hero-night-poster.webp"
+          className={`absolute inset-0 h-full w-full object-cover opacity-0 dark:opacity-80 ${
+            mounted ? "transition-opacity duration-1000 ease-in-out" : ""
+          }`}
+        >
+          <source src="/hero-night-video.mp4" type="video/mp4" />
+        </video>
+
+        {/* Dynamic Gradient Overlay */}
+        <div className={`absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-background dark:from-black/40 dark:via-black/20 dark:to-background ${
+            mounted ? "transition-colors duration-1000" : ""
+          }`} 
+        />
+      </div>
+
+      <div className="container mx-auto px-4 z-10 relative">
         <motion.div
           animate={{ opacity: 1, y: 0 }}
           className="text-center max-w-4xl mx-auto"
@@ -41,7 +83,7 @@ export const HeroSection = ({
         >
           <motion.h1
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-500 to-secondary-500 dark:from-cyan-200 dark:to-cyan-300 bg-clip-text text-transparent"
+            className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-600 to-secondary-500 dark:from-cyan-200 dark:via-white dark:to-purple-300 bg-clip-text text-transparent drop-shadow-md"
             initial={{ opacity: 0, y: 20 }}
             transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
@@ -51,7 +93,7 @@ export const HeroSection = ({
 
           <motion.p
             animate={{ opacity: 1, y: 0 }}
-            className="text-foreground-600 text-lg md:text-xl mb-8 leading-relaxed"
+            className="text-foreground-600 dark:text-slate-200 text-lg md:text-xl mb-8 leading-relaxed drop-shadow"
             initial={{ opacity: 0, y: 20 }}
             transition={{ delay: 0.4, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
@@ -68,11 +110,11 @@ export const HeroSection = ({
               download
               aria-label="Download CV in PDF format"
               className="w-full sm:w-auto"
-              href="/new CV.pdf"
+              href="/Bruce_Bai_Resume.pdf"
             >
               <Button
                 fullWidth
-                aria-label="Downoald CV"
+                aria-label="Download CV"
                 color="primary"
                 endContent={<Icon icon="lucide:download" />}
                 size="lg"

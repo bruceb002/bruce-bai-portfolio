@@ -9,6 +9,7 @@ import { Footer } from "@/components/footer";
 import { Navigation } from "@/components/navbar";
 import { PageWrapper } from "@/components/page-wrapper";
 import { Providers } from "@/app/providers";
+import SplashScreen from "@/components/splash-screen";
 import { StarsBackground } from "@/components/backgrounds/stars";
 
 const inter = Inter({
@@ -80,6 +81,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             defaultTheme: "dark",
           }}
         >
+          {/* SplashScreen sits at the root level inside Providers */}
+          <SplashScreen />
           <StarsBackground>{content}</StarsBackground>
         </Providers>
       </body>

@@ -3,11 +3,6 @@ export interface ContactCardProps {
   children: React.ReactNode;
 }
 
-export interface ContactMapProps {
-  src: string;
-  className?: string;
-}
-
 export interface ContactFormData {
   name: string;
   email: string;
