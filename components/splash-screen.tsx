@@ -32,7 +32,7 @@ export default function SplashScreen() {
           <div className="w-full h-full grid grid-cols-1 md:grid-cols-3 items-center justify-items-center relative overflow-hidden">
             
             {/* LEFT VINE */}
-            <div className="absolute inset-y-0 left-0 w-[62%] sm:w-1/2 md:relative md:w-full h-full flex items-center justify-start pointer-events-none opacity-25 dark:opacity-85 overflow-hidden -ml-6 sm:-ml-4 md:ml-0">
+            <div className="absolute inset-y-0 left-0 w-1/2 md:relative md:w-full h-full flex items-center justify-start pointer-events-none opacity-25 dark:opacity-85 overflow-hidden -ml-8 sm:-ml-4 md:ml-0">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -43,8 +43,8 @@ export default function SplashScreen() {
                   src="/gold-vines-left.png"
                   alt="Gold Vines Left"
                   fill
-                  sizes="(max-width: 768px) 60vw, 33vw"
-                  className="object-contain object-left scale-110"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-contain object-left scale-75 sm:scale-90 md:scale-110"
                   priority
                 />
               </motion.div>
@@ -81,7 +81,7 @@ export default function SplashScreen() {
             </div>
 
             {/* RIGHT VINE */}
-            <div className="absolute inset-y-0 right-0 w-[62%] sm:w-1/2 md:relative md:w-full h-full flex items-center justify-end pointer-events-none opacity-25 dark:opacity-85 overflow-hidden -mr-6 sm:-mr-4 md:mr-0">
+            <div className="absolute inset-y-0 right-0 w-1/2 md:relative md:w-full h-full flex items-center justify-end pointer-events-none opacity-25 dark:opacity-85 overflow-hidden -mr-8 sm:-mr-4 md:mr-0">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -92,8 +92,8 @@ export default function SplashScreen() {
                   src="/gold-vines-right.png"
                   alt="Gold Vines Right"
                   fill
-                  sizes="(max-width: 768px) 60vw, 33vw"
-                  className="object-contain object-right scale-110"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-contain object-right scale-75 sm:scale-90 md:scale-110"
                   priority
                 />
               </motion.div>
