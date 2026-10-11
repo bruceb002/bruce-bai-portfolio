@@ -31,7 +31,6 @@ export const ProjectCard = memo(function ProjectCard({
               img: "w-full h-full object-cover",
               zoomedWrapper: "w-full h-full",
             }}
-            loading="lazy"
             src={project.image}
           />
           <CardFooter

@@ -45,6 +45,7 @@ export const HeroSection = ({
           loop
           muted
           playsInline
+          preload="metadata"
           poster="/hero-day-poster.webp"
           className={`absolute inset-0 h-full w-full object-cover object-[75%_center] md:object-center opacity-80 dark:opacity-0 ${
             mounted ? "transition-opacity duration-1000 ease-in-out" : ""
@@ -59,6 +60,7 @@ export const HeroSection = ({
           loop
           muted
           playsInline
+          preload="metadata"
           poster="/hero-night-poster.webp"
           className={`absolute inset-0 h-full w-full object-cover object-[75%_center] md:object-center opacity-0 dark:opacity-80 ${
             mounted ? "transition-opacity duration-1000 ease-in-out" : ""
@@ -77,7 +79,7 @@ export const HeroSection = ({
       <div className="container mx-auto px-4 z-10 relative">
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="text-center max-w-4xl mx-auto"
+          className="text-center max-w-4xl mx-auto transform-gpu"
           initial={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
