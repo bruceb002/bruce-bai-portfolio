@@ -2,7 +2,7 @@
 
 A high-end, cinematic personal portfolio built with a cohesive *folklore/evermore*-inspired aesthetic, featuring burnished gold accents, custom botanical animations, and a fully responsive layout.
 
-**Live Demo:** [bruce-bai-portfolio.vercel.app](https://bruce-bai-portfolio.vercel.app) *(Update with your actual Vercel URL once deployed)*
+**Live Demo:** [bruce-bai-portfolio.vercel.app](https://bruce-bai-portfolio.vercel.app)
 
 ---
 
