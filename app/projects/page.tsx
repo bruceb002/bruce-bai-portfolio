@@ -28,7 +28,7 @@ const ProjectsPage = () => {
   );
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
+    <div className="max-w-6xl mx-auto px-4 py-12 text-amber-50">
       <PageHeader texts={DATA.morphingTexts.projects} />
 
       <ProjectsTabs

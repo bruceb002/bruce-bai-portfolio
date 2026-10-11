@@ -1,11 +1,26 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Button } from "@heroui/react";
 import { Icon } from "@iconify/react";
-import { useTheme } from "@heroui/use-theme";
+import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 
 export const ThemeSwitcher = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <div className="w-9 h-9" />;
+  }
+
+  return <ThemeSwitcherInner />;
+};
+
+function ThemeSwitcherInner() {
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
 
@@ -29,4 +44,4 @@ export const ThemeSwitcher = () => {
       </Button>
     </motion.div>
   );
-};
+}
