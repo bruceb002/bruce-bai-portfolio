@@ -2,6 +2,7 @@
 
 import { memo } from "react";
 import { Card, CardFooter, Image } from "@heroui/react";
+import { motion } from "framer-motion"; // <-- Add this import
 
 import { HighlightText } from "@/components/textAnimations/highlight-text";
 import { SplittingText } from "@/components/textAnimations/splitting-text";
@@ -36,16 +37,15 @@ export const ProfileCard = memo(function ProfileCard({
         {/* Right Description */}
         <div className="text-muted-foreground text-sm leading-relaxed max-w-2xl px-6 py-4">
           {description.map((paragraph, index) => (
-            <p key={index} className="mb-4">
-              <SplittingText
-                delay={index * 500}
-                inView={true}
-                inViewOnce={true}
-                motionVariants={{ stagger: 0.08 }}
-                text={paragraph}
-                type="words"
-              />
-            </p>
+            <motion.p
+              key={index}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 + index * 0.15, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="mb-4 transform-gpu"
+            >
+              {paragraph}
+            </motion.p>
           ))}
         </div>
       </div>
