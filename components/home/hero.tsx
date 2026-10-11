@@ -108,19 +108,19 @@ export const HeroSection = ({
           >
             <Link
               download
-              aria-label="Download CV in PDF format"
+              aria-label="Download Resume in PDF format"
               className="w-full sm:w-auto"
               href="/Bruce_Bai_Resume.pdf"
             >
               <Button
                 fullWidth
-                aria-label="Download CV"
+                aria-label="Download Resume"
                 color="primary"
                 endContent={<Icon icon="lucide:download" />}
                 size="lg"
                 variant="shadow"
               >
-                Download CV
+                Download Resume
               </Button>
             </Link>
             <Button
