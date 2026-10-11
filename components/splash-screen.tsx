@@ -26,13 +26,13 @@ export default function SplashScreen() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="fixed inset-0 z-[100] bg-[#050505] overflow-hidden w-screen h-screen flex items-center justify-center"
+          className="fixed inset-0 z-[100] bg-white dark:bg-[#050505] overflow-hidden w-screen h-screen flex items-center justify-center transition-colors duration-500"
         >
           {/* Fullscreen Grid Layout */}
           <div className="w-full h-full grid grid-cols-1 md:grid-cols-3 items-center justify-items-center relative overflow-hidden">
             
             {/* LEFT VINE */}
-            <div className="absolute inset-y-0 left-0 w-1/2 md:relative md:w-full h-full flex items-center justify-start pointer-events-none opacity-30 md:opacity-85 overflow-hidden">
+            <div className="absolute inset-y-0 left-0 w-1/2 md:relative md:w-full h-full flex items-center justify-start pointer-events-none opacity-25 dark:opacity-85 overflow-hidden">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -72,14 +72,14 @@ export default function SplashScreen() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-                className="font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none bg-gradient-to-r from-[#8B6508] via-[#DAA520] to-[#8B6508] bg-clip-text text-transparent whitespace-nowrap"
+                className="font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none bg-gradient-to-r from-[#8B6508] via-[#DAA520] to-[#8B6508] bg-clip-text text-transparent whitespace-nowrap drop-shadow-sm dark:drop-shadow-none"
               >
                 Bruce Bai
               </motion.span>
             </div>
 
             {/* RIGHT VINE */}
-            <div className="absolute inset-y-0 right-0 w-1/2 md:relative md:w-full h-full flex items-center justify-end pointer-events-none opacity-30 md:opacity-85 overflow-hidden">
+            <div className="absolute inset-y-0 right-0 w-1/2 md:relative md:w-full h-full flex items-center justify-end pointer-events-none opacity-25 dark:opacity-85 overflow-hidden">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
