@@ -33,7 +33,7 @@ function generateStars(count: number, starColor: string) {
 }
 
 function StarLayer({
-  count = 1000,
+  count = 300,
   size = 1,
   transition = { repeat: Infinity, duration: 50, ease: "linear" },
   starColor = "#fff",
@@ -49,7 +49,7 @@ function StarLayer({
   return (
     <motion.div
       animate={{ y: [0, -2000] }}
-      className={cn("absolute top-0 left-0 w-full h-[2000px]", className)}
+      className={cn("absolute top-0 left-0 w-full h-[2000px] transform-gpu", className)}
       data-slot="star-layer"
       transition={transition}
       {...props}
@@ -122,17 +122,17 @@ function StarsBackground({
       {...props}
     >
       <motion.div
-        className={cn({ "pointer-events-none": !pointerEvents })}
+        className={cn("transform-gpu", { "pointer-events-none": !pointerEvents })}
         style={{ x: springX, y: springY }}
       >
         <StarLayer
-          count={1000}
+          count={300}
           size={1}
           starColor={starColor}
           transition={{ repeat: Infinity, duration: speed, ease: "linear" }}
         />
         <StarLayer
-          count={400}
+          count={150}
           size={2}
           starColor={starColor}
           transition={{
@@ -142,7 +142,7 @@ function StarsBackground({
           }}
         />
         <StarLayer
-          count={200}
+          count={50}
           size={3}
           starColor={starColor}
           transition={{
