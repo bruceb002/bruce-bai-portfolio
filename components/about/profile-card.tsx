@@ -2,7 +2,7 @@
 
 import { memo } from "react";
 import { Card, CardFooter, Image } from "@heroui/react";
-import { motion } from "framer-motion"; // <-- Add this import
+import { motion } from "framer-motion";
 
 import { HighlightText } from "@/components/textAnimations/highlight-text";
 import { SplittingText } from "@/components/textAnimations/splitting-text";
@@ -17,12 +17,12 @@ export const ProfileCard = memo(function ProfileCard({
   return (
     <Card className="w-full max-w-6xl mx-auto p-0 md:p-0 mb-12 rounded-2xl dark:shadow-neutral-700 shadow-md overflow-hidden bg-white/90 dark:bg-black/60">
       <div className="flex flex-col mdplus:flex-row items-center md:items-start gap-8">
-        {/* Left image card */}
-        <div className="w-full md:w-[300px] relative h-[300px]">
+        {/* Left image card - Taller on mobile so your face fits comfortably */}
+        <div className="w-full md:w-[300px] relative h-[400px] sm:h-[420px] md:h-[300px]">
           <Card isFooterBlurred className="w-full h-full">
             <Image
               alt="Profile background"
-              className="z-0 object-cover"
+              className="z-0 object-cover object-top w-full h-full"
               src={image}
             />
             <CardFooter className="absolute bg-black/50 bottom-0 z-10 border-t border-white/20">
