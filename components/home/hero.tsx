@@ -47,7 +47,7 @@ export const HeroSection = ({
           playsInline
           preload="metadata"
           poster="/hero-day-poster.webp"
-          className={`absolute inset-0 h-full w-full object-cover object-[75%_center] md:object-center opacity-80 dark:opacity-0 ${
+          className={`absolute inset-0 h-full w-full object-cover object-[75%_center] md:object-[90%_center] xl:object-center opacity-80 dark:opacity-0 ${
             mounted ? "transition-opacity duration-1000 ease-in-out" : ""
           }`}
         >
@@ -62,7 +62,7 @@ export const HeroSection = ({
           playsInline
           preload="metadata"
           poster="/hero-night-poster.webp"
-          className={`absolute inset-0 h-full w-full object-cover object-[75%_center] md:object-center opacity-0 dark:opacity-80 ${
+          className={`absolute inset-0 h-full w-full object-cover object-[75%_center] md:object-[90%_center] xl:object-center opacity-0 dark:opacity-80 ${
             mounted ? "transition-opacity duration-1000 ease-in-out" : ""
           }`}
         >

@@ -17,15 +17,15 @@ export const ProfileCard = memo(function ProfileCard({
   return (
     <Card className="w-full max-w-6xl mx-auto p-0 md:p-0 mb-12 rounded-2xl dark:shadow-neutral-700 shadow-md overflow-hidden bg-white/90 dark:bg-black/60">
       <div className="flex flex-col mdplus:flex-row items-center md:items-start gap-8">
-        {/* Left image card - Taller on mobile so your face fits comfortably */}
+        {/* Left image card */}
         <div className="w-full md:w-[300px] relative h-[400px] sm:h-[420px] md:h-[300px]">
           <Card isFooterBlurred className="w-full h-full">
             <Image
               alt="Profile background"
-              className="z-0 object-cover object-top w-full h-full"
+              className="z-0 object-cover object-[center_15%] w-full h-full"
               src={image}
             />
-            <CardFooter className="absolute bg-black/50 bottom-0 z-10 border-t border-white/20">
+            <CardFooter className="absolute bg-black/50 backdrop-blur-md bottom-0 z-10 border-t border-white/20">
               <div className="flex flex-col text-white">
                 <HighlightText className="text-lg font-semibold " text={name} />
                 <p className="text-sm text-white/80">{title}</p>
